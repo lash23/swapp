@@ -1,0 +1,18 @@
+<ion-tabs #swTabs (ionTabsWillChange)="keepRoot()">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="starships">
+      <i>$</i>
+      <ion-label>starships</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="characters">
+      <i>#</i>
+      <ion-label>characters</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="films">
+      <i>{{ '{' }}</i>
+      <ion-label>films</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

@@ -1,0 +1,106 @@
+<app-header [title]="'Character Details'">
+</app-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-content>
+            <h1 class="ion-text-center">
+              {{ character?.name }}
+            </h1>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <!-- IMAGE -->
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card-content>
+            <img [src]="featureImage" alt="swapp">
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <!-- PHYSICAL DETAILS -->
+      <ion-col size="12" size-md="8">
+        <ion-card>
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="6">
+                <h2>
+                  Hair_color : {{ character?.hair_color }}
+                </h2>
+              </ion-col>
+              <ion-col size="6">
+                <h2>
+                  Skin color : {{ character?.skin_color }}
+                </h2>
+              </ion-col>
+              <ion-col size="6">
+                <h2>
+                  Eye color : {{ character?.eye_color }}
+                </h2>
+              </ion-col>
+              <ion-col size="6">
+                <h2>
+                  Birth year : {{ character?.birth_year }}
+                </h2>
+              </ion-col>
+              <ion-col size="6">
+                <h2>
+                  Gender : {{ character?.gender }}
+                </h2>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <!-- STARSHIPS -->
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-content>
+            <h2 class="ion-text-center">
+              {{
+                starships.length > 0 ?
+                  'Starships list' :
+                  'This character has not registered starships'
+              }}
+            </h2>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col
+        size="12"
+        size-md="4"
+        *ngFor="let starship of starships">
+        <app-starship-card [starship]="starship"
+          [routerLink]="['/tabs/starships/starship-details', starship.id]">
+        </app-starship-card>
+      </ion-col>
+
+      <!-- FILMS -->
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-content>
+            <h2 class="ion-text-center">
+              {{
+                films.length > 0 ?
+                  'Films list' :
+                  'This character has not registered films'
+              }}
+            </h2>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col
+        size="12"
+        size-md="4"
+        *ngFor="let film of films">
+        <app-film-card [film]="film"
+          [routerLink]="['/tabs/films/film-details', film.id]">
+        </app-film-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

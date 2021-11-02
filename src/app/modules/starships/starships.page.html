@@ -1,0 +1,27 @@
+<app-header>
+</app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-content>
+            <h1 class="ion-text-center">
+              starships
+            </h1>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col
+        size="12"
+        size-md="3"
+        *ngFor="let starship of starships"
+        >
+        <app-starship-card [starship]="starship"
+          [routerLink]="['starship-details', starship.id]">
+        </app-starship-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

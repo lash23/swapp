@@ -1,0 +1,51 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      {{ starship.name }}
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-row>
+      <ion-col size="12">
+        <p>
+          model:
+        </p>
+        <span>
+          {{ starship.model }}
+        </span>
+      </ion-col>
+      <ion-col size="6">
+        <p>
+          crew:
+        </p>
+        <span>
+          {{ starship.crew }}
+        </span>
+      </ion-col>
+      <ion-col size="6">
+        <p>
+          passengers:
+        </p>
+        <span>
+          {{ starship.passengers }}
+        </span>
+      </ion-col>
+      <ion-col size="6">
+        <p>
+          max speed:
+        </p>
+        <span>
+          {{ starship.max_atmosphering_speed }}
+        </span>
+      </ion-col>
+      <ion-col size="6">
+        <p>
+          cost:
+        </p>
+        <span>
+          {{ starship.cost_in_credits }}
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>

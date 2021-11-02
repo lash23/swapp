@@ -1,0 +1,47 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      {{ character.name }}
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-row>
+      <ion-col size="6">
+        <p>
+          birth year:
+        </p>
+        <span>
+          {{ character.birth_year }}
+        </span>
+      </ion-col>
+      <ion-col size="6">
+        <p>
+          height:
+        </p>
+        <span>
+          {{ character.height }}
+        </span>
+      </ion-col>
+      <ion-col size="6">
+        <p>
+          films number:
+        </p>
+        <span>
+          {{ character.films?.length }}
+        </span>
+      </ion-col>
+      <ion-col size="6">
+        <p>
+          pilot:
+        </p>
+        <span>
+          {{ 
+            character.starships?.length > 0 ?
+              'yes' :
+              'no'
+           }}
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>

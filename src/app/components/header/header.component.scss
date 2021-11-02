@@ -1,0 +1,30 @@
+.header-content {
+  margin: 0 90px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  align-content: center;
+}
+
+i-link {
+  text-transform: uppercase;
+  margin: 0 5px;
+  &:hover {
+    cursor: pointer
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    margin: auto;
+    text-align: center;
+    h1 span {
+      margin: 0;
+    }
+  }
+  .menu {
+  display: none;
+  }
+}
